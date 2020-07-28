@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
     classifier.fit(X, Y)
 
-    test_set_x = encoder.transform(row[:-1] for row in testingSet)
+    test_set_x = encoder.transform([row[:-1] for row in testingSet])
     test_set_y = [row[-1] for row in testingSet]
     predictions = classifier.predict(test_set_x)
 
