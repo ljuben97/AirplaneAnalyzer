@@ -62,7 +62,7 @@ def getTrainingSet(fullData):
     return trainingSet
 
 def getTestingSet(fullData):
-    testingSet = fullData['March'].values.tolist()
+    testingSet = fullData['April'].values.tolist()
     testingSet = getDataset(testingSet)
     return testingSet
 
