@@ -56,6 +56,12 @@ def getDataset(dataset):
         row[8] = temp
     return dataset
 
+def getSampleDataset(dataset):
+    for row in dataset:
+        row[6] = int(row[6])
+
+    return dataset
+
 def getTrainingSet(fullData):
     trainingSet = fullData['January'].values.tolist()+fullData['February'].values.tolist()+fullData['March'].values.tolist()
     trainingSet = getDataset(trainingSet)
@@ -115,8 +121,8 @@ def randomForestClassification(X, Y, test_set_x, test_set_y):
     plt.title("F1 score measured by max depth")
     plt.xlabel("Max Depth")
     plt.ylabel("F1 Score")
-    g_plot, = plt.plot(n_estimators, y_depths["gini"], color="r")
-    e_plot, = plt.plot(n_estimators, y_depths["entropy"], color="b")
+    g_plot, = plt.plot(max_depths, y_depths["gini"], color="r")
+    e_plot, = plt.plot(max_depths, y_depths["entropy"], color="b")
     plt.legend([g_plot, e_plot], ["Gini", "Entropy"])
     plt.show()
 
@@ -141,7 +147,7 @@ if __name__ == '__main__':
     classifier.fit(X, Y)
 
     test_set_x = encoder.transform([row[:-1] for row in testingSet])
-    print(np.isnan(test_set_x).any())
+
     test_set_y = [row[-1] for row in testingSet]
     predictions = classifier.predict(test_set_x)
 
@@ -155,11 +161,13 @@ if __name__ == '__main__':
     print(accuracy)
     print(f1_score(test_set_y,predictions))
 
-    randomForestClassification(X,Y,test_set_x,test_set_y)
+    # randomForestClassification(X,Y,test_set_x,test_set_y)
 
     #Predviduvanje na zadocnuvanje so test primeroci
-    test_primeroci = pd.read_csv("Sample.csv")
-    test_primeroci = getDataset(test_primeroci)
+    test_primeroci = pd.read_csv("Sample.csv").values.tolist()
+    test_primeroci = getSampleDataset(test_primeroci)
+    encoder.fit(test_primeroci)
+    test_primeroci = encoder.transform(test_primeroci)
 
     RFClassifier = RandomForestClassifier()
     RFClassifier.fit(X,Y)

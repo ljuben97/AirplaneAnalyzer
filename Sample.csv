@@ -1,31 +1,31 @@
-﻿"DAY_OF_WEEK,""OP_UNIQUE_CARRIER"",""ORIGIN"",""ORIGIN_STATE_NM"",""DEST"",""DEST_STATE_NM"",""DEP_DEL15"",""DISTANCE_GROUP"","
-"2,""OH"",""DAY"",""Ohio"",""DFW"",""TEXAS"",0.00,2,"
-"1,""OH"",""DFW"",""Texas"",""SAV"",""Georgia"",0.00,4,"
-"2,""WN"",""BWI"",""Maryland"",""PIT"",""Pennsylvania"",0.00,4,"
-"3,""AA"",""RNO"",""Nevada"",""SJC"",""California"",1.00,3,"
-"7,""9E"",""JFK"",""New York"",""MSP"",""Minnesota"",1.00,2,"
-"5,""9E"",""BWI"",""Maryland"",""ATL"",""Georgia"",0.00,1,"
-"5,""OH"",""DTW"",""Michigan"",""CVG"",""Kentucky"",0.00,1,"
-"7,""EV"",""SHV"",""Louisiana"",""ORD"",""Illinois"",1.00,1,"
-"6,""F9"",""XNA"",""Arkansas"",""DEN"",""Colorado""0,00,3,"
-"1,""EV"",""ORD"",""Illinois"",""ATL"",""Georgia"",0.00,2,"
-"7,""AA"",""MCO"",""Florida"",""DEN"",""Colorado""1,00,3,"
-"5,""EV"",""IAH"",""Texas"",""LRD"",""Texas"",1.00,1,"
-"7,""AA"",""IAH"",""Texas"",""JAN"",""Mississippi"",0.00,2,"
-"5,""ZW"",""ATL"",""Georgia"",""COU"",""Missouri"",0.00,3,"
-"6,""WN"",""ORF"",""Virginia"",""ORD"",""Illinois"",1,00,3,"
-"2,""EV"",""TYS"",""Tennessee"",""IAH"",""Texas"",1.00,3,"
-"4,""WN"",""CLE"",""Ohio"",""ATL"",""Georgia"",0.00,2,"
-"3,""EV"",""TYS"",""Tennessee"",""ATL"",""Georgia"",1.00,1,"
-"5,""OO"",""ABQ"",""New Mexico"",""EWR"",""New Jersey"",1.00,7,"
-"4,""OO"",""IAH"",""Texas"",""ECP"",""Florida"",0.00,4,"
-"6,""WN"",""AEX"",""Louisiana"",""LEX"",""Kentucky"",0.00,2,"
-"1,""EV"",""MKE"",""Wisconsin"",""GRK"",""Texas"",0.00,4,"
-"6,""EV"",""TYS"",""Tennessee"",""IAH"",""Texas"",0.00,2,"
-"7,""OH"",""VPS"",""Florida"",""STL"",""Missouri"",0.00,3,"
-"1,""WN"",""MTJ"",""Colorado"",""EWR"",""New Jersey"",1.00,4,"
-"2,""EV"",""DCA"",""Virginia"",""SAV"",""Georgia"",1.00,1,"
-"5,""OO"",""ORD"",""Illinois"",""IAH"",""Texas"",1.00,3,"
-"3,""WN"",""SDF"",""Kentucky"",""BNA"",""Tennessee"",1.00,0,"
-"7,""EV"",""CLT"",""North Carolina"",""ABQ"",""New Mexico"",0.00,6,"
-"6,""OH"",""COS"",""Colorado"",""MOB"",""Alabama"",0.00,4,"
+﻿"DAY_OF_WEEK","OP_UNIQUE_CARRIER","ORIGIN","ORIGIN_STATE_NM","DEST","DEST_STATE_NM","DEP_DEL15","DISTANCE_GROUP"
+2,"OH","DAY","Ohio","DFW","TEXAS",0.00,2
+1,"OH","DFW","Texas","SAV","Georgia",0.00,4
+2,"WN","BWI","Maryland","PIT","Pennsylvania",0.00,4
+3,"AA","RNO","Nevada","SJC","California",1.00,3
+7,"9E","JFK","New York","MSP","Minnesota",1.00,2
+5,"9E","BWI","Maryland","ATL","Georgia",0.00,1
+5,"OH","DTW","Michigan","CVG","Kentucky",0.00,1
+7,"EV","SHV","Louisiana","ORD","Illinois",1.00,1
+6,"F9","XNA","Arkansas","DEN","Colorado"0,00,3
+1,"EV","ORD","Illinois","ATL","Georgia",0.00,2
+7,"AA","MCO","Florida","DEN","Colorado"1,00,3
+5,"EV","IAH","Texas","LRD","Texas",1.00,1
+7,"AA","IAH","Texas","JAN","Mississippi",0.00,2
+5,"ZW","ATL","Georgia","COU","Missouri",0.00,3
+6,"WN","ORF","Virginia","ORD","Illinois",1.00,3
+2,"EV","TYS","Tennessee","IAH","Texas",1.00,3
+4,"WN","CLE","Ohio","ATL","Georgia",0.00,2
+3,"EV","TYS","Tennessee","ATL","Georgia",1.00,1
+5,"OO","ABQ","New Mexico","EWR","New Jersey",1.00,7
+4,"OO","IAH","Texas","ECP","Florida",0.00,4
+6,"WN","AEX","Louisiana","LEX","Kentucky",0.00,2
+1,"EV","MKE","Wisconsin","GRK","Texas",0.00,4
+6,"EV","TYS","Tennessee","IAH","Texas",0.00,2
+7,"OH","VPS","Florida","STL","Missouri",0.00,3
+1,"WN","MTJ","Colorado","EWR","New Jersey",1.00,4
+2,"EV","DCA","Virginia","SAV","Georgia",1.00,1
+5,"OO","ORD","Illinois","IAH","Texas",1.00,3
+3,"WN","SDF","Kentucky","BNA","Tennessee",1.00,0
+7,"EV","CLT","North Carolina","ABQ","New Mexico",0.00,6
+6,"OH","COS","Colorado","MOB","Alabama",0.00,4
