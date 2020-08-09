@@ -160,7 +160,7 @@ if __name__ == '__main__':
 
     full_data = readFullData()
 
-    # statisticalInfo(pd.concat(full_data.values()))
+    statisticalInfo(pd.concat(full_data.values()))
 
     print('Getting training set')
 
@@ -202,7 +202,7 @@ if __name__ == '__main__':
     print(accuracy)
     print(f1_score(test_set_y,predictions))
 
-    # randomForestClassification(X,Y,test_set_x,test_set_y)
+    randomForestClassification(X,Y,test_set_x,test_set_y)
 
     #Predviduvanje na zadocnuvanje so test primeroci
     test_primeroci = pd.read_csv("Sample.csv").values.tolist()
