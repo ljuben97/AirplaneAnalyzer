@@ -206,7 +206,6 @@ if __name__ == '__main__':
 
     #Predviduvanje na zadocnuvanje so test primeroci
     test_primeroci = pd.read_csv("Sample.csv").values.tolist()
-
     test_primeroci = getSampleDataset(test_primeroci)
     encoder.fit(test_primeroci)
     test_primeroci = encoder.transform(test_primeroci)
