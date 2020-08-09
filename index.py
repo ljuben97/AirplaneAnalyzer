@@ -157,4 +157,13 @@ if __name__ == '__main__':
 
     randomForestClassification(X,Y,test_set_x,test_set_y)
 
+    #Predviduvanje na zadocnuvanje so test primeroci
+    test_primeroci = pd.read_csv("Sample.csv")
+    test_primeroci = getDataset(test_primeroci)
+
+    RFClassifier = RandomForestClassifier()
+    RFClassifier.fit(X,Y)
+    print("\nPredviduvanje na zadocnuvanje kaj test primerocite:\n")
+    print("Predviduvanje spored Naive Bayes:",classifier.predict(test_primeroci))
+    print("Predviduvanje spored Random Forest:", RFClassifier.predict(test_primeroci))
 
