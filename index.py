@@ -10,19 +10,16 @@ from sklearn.metrics import f1_score
 from sklearn.ensemble import RandomForestClassifier
 
 def readFullData():
-    #Podatocite se smestuvaat vo tn. hash mappa (dict vo python) so vrednost na kluchot po imeto na mesecot
     data_frames =dict()
 
     data_frames["January"] = pd.read_csv("January.csv")
     data_frames["February"] = pd.read_csv("February.csv")
     data_frames["March"] = pd.read_csv("March.csv")
     data_frames["April"] = pd.read_csv("April.csv")
-    #Za da gi spoish site podatoci posle imash funkcija pd.concat, ama taa zima lista od Dataframeovi
     return data_frames
 
 
 def barPlot(data_x, data_y):
-    #Sepak poarno bilo so seaborn barplot, ama dolgo vreme trae za sekoja kolona da napravi plot
     plt.figure()
     sns.barplot(data_x,data_y)
     plt.show()
@@ -95,7 +92,6 @@ def randomForestClassification(X, Y, test_set_x, test_set_y):
         rf_g.fit(X,Y)
         rf_e.fit(X, Y)
         predictions = rf_g.predict(test_set_x)
-        #Zemam f1 score bidejki zema vo predvid i promashenite klasifikacii
         y_estimators["gini"].append(f1_score(test_set_y,predictions))
         predictions = rf_e.predict(test_set_x)
         y_estimators["entropy"].append(f1_score(test_set_y, predictions))
@@ -109,8 +105,6 @@ def randomForestClassification(X, Y, test_set_x, test_set_y):
     plt.legend([g_plot,e_plot],["Gini","Entropy"])
     plt.show()
 
-    #Posho se gleda deka so 100 estimatori bez ogranichuvanje na dlabochinata dava najdobar rezultat, zemame 100 za
-    #broj na estimatori za slednava proverka
     y_depths = dict()
     y_depths["gini"] = []
     y_depths["entropy"] = []
@@ -121,7 +115,6 @@ def randomForestClassification(X, Y, test_set_x, test_set_y):
         rf_g.fit(X, Y)
         rf_e.fit(X, Y)
         predictions = rf_g.predict(test_set_x)
-        # Zemam f1 score bidejki zema vo predvid i promashenite klasifikacii
         y_depths["gini"].append(f1_score(test_set_y, predictions))
         predictions = rf_e.predict(test_set_x)
         y_depths["entropy"].append(f1_score(test_set_y, predictions))
@@ -160,7 +153,7 @@ if __name__ == '__main__':
 
     full_data = readFullData()
 
-    # statisticalInfo(pd.concat(full_data.values()))
+    statisticalInfo(pd.concat(full_data.values()))
 
     print('Getting training set')
 
@@ -202,9 +195,8 @@ if __name__ == '__main__':
     print(accuracy)
     print(f1_score(test_set_y,predictions))
 
-    # randomForestClassification(X,Y,test_set_x,test_set_y)
+    randomForestClassification(X,Y,test_set_x,test_set_y)
 
-    #Predviduvanje na zadocnuvanje so test primeroci
     test_primeroci = pd.read_csv("Sample.csv").values.tolist()
     test_primeroci = getSampleDataset(test_primeroci)
     encoder.fit(test_primeroci)
