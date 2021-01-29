@@ -150,7 +150,7 @@ if __name__ == '__main__':
 
     full_data = readFullData()
 
-    statisticalInfo(pd.concat(full_data.values()))
+    statisticalInfo(full_data)
 
     print('Getting training set')
 
