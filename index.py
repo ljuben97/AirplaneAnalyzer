@@ -10,12 +10,9 @@ from sklearn.metrics import f1_score
 from sklearn.ensemble import RandomForestClassifier
 
 def readFullData():
-    data_frames =dict()
 
-    data_frames["January"] = pd.read_csv("January.csv")
-    data_frames["February"] = pd.read_csv("February.csv")
-    data_frames["March"] = pd.read_csv("March.csv")
-    data_frames["April"] = pd.read_csv("April.csv")
+    data_frames = pd.read_csv("minimized_data.csv")
+
     return data_frames
 
 
@@ -60,12 +57,12 @@ def getSampleDataset(dataset):
     return dataset
 
 def getTrainingSet(fullData):
-    trainingSet = fullData['January'].values.tolist()+fullData['February'].values.tolist()+fullData['March'].values.tolist()
+    trainingSet = fullData[0:int(len(fullData)*0.7)]
     trainingSet = getDataset(trainingSet)
     return trainingSet
 
 def getTestingSet(fullData):
-    testingSet = fullData['April'].values.tolist()
+    testingSet = fullData[int(len(fullData)*0.7):]
     testingSet = getDataset(testingSet)
     return testingSet
 
@@ -153,7 +150,7 @@ if __name__ == '__main__':
 
     full_data = readFullData()
 
-    statisticalInfo(pd.concat(full_data.values()))
+    statisticalInfo(full_data)
 
     print('Getting training set')
 
